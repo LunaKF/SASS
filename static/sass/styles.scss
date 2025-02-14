@@ -3,6 +3,7 @@
 @use 'base/base';
 @use 'base/typography';
 @use 'base/colors';
+@use 'layout/containers';
 
 body {
     font-family: vars.$font-family-base;
