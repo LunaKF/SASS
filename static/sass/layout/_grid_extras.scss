@@ -1,0 +1,26 @@
+/* Grid Extras*/
+@use "../base/variables" as vars;
+@use "sass:math";
+
+@each $breakpoint, $size in vars.$breakpoints {
+  @for $i from 1 through vars.$grid-columns {
+    .col-#{$breakpoint}-#{$i} {
+      @media (min-width: $size) {
+        width: math.div(100%, vars.$grid-columns) * $i;
+      }
+    }
+  }
+}
+
+@each $breakpoint, $size in vars.$breakpoints {
+  @each $num, $gutter-size in vars.$gutter-sizes {
+    @media (min-width: $size) {
+      .gx-#{$breakpoint}-#{$num} {
+        --gutter-x: #{$gutter-size};
+      }
+      .gy-#{$breakpoint}-#{$num} {
+        --gutter-y: #{$gutter-size};
+      }
+    }
+  }
+}
