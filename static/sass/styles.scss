@@ -1,11 +1,11 @@
 @use "base/reset";
 @use "base/variables" as vars;
 @use "base/base";
-@use "base/typography";
 @use "base/colors";
 @use "layout/containers";
 @use "layout/grid";
 @use "layout/grid_extras";
+@use "base/typography";
 
 body {
   font-family: vars.$font-family-base;
